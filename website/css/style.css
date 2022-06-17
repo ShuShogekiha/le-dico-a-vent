@@ -1,0 +1,245 @@
+body {
+  background-color: rgb(238, 238, 238);
+  margin: 0;
+  font-family: sans-serif;
+}
+body li {
+  list-style: none;
+}
+
+header {
+  background-color: #1B2430;
+}
+header nav {
+  max-width: 1200px;
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+  padding: 1.6rem;
+}
+header nav img {
+  height: 50px;
+  width: 55px;
+  object-fit: contain;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li a {
+  padding: 1rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  position: relative;
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8d8d8d;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+header nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+main article {
+  max-width: 1200px;
+  margin: auto;
+}
+main article img {
+  float: left;
+  width: 300px;
+  height: 284px;
+}
+main article h2 {
+  font-size: 36px;
+}
+main article button {
+  box-shadow: 1px 3px 5px rgb(87, 86, 86);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+main article button.type_t {
+  background-color: #D6D5A8;
+}
+main article button.type_g {
+  background: radial-gradient(#816797, #51557E);
+  color: white;
+}
+main article button.discover {
+  background-color: #1B2430;
+  color: white;
+}
+main article p {
+  margin-bottom: 125px;
+  font-size: 1.25rem;
+}
+main article.impair img {
+  float: right;
+}
+main div.typeChange {
+  position: relative;
+}
+main div.typeChange h2 {
+  text-align: center;
+  margin: 5rem;
+  font-size: 1.9rem;
+}
+main div.typeChange::before {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  width: calc(30% - 220px);
+  left: 20%;
+  top: 0.9rem;
+}
+main div.typeChange::after {
+  content: "";
+  border: 1px solid black;
+  position: absolute;
+  width: calc(30% - 220px);
+  right: 20%;
+  top: 0.9rem;
+}
+
+footer {
+  background-color: #1B2430;
+  display: flex;
+  flex-direction: column;
+}
+footer div.topo {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  position: relative;
+}
+footer div.topo::before {
+  content: "";
+  border: 1px solid #C4C4C4;
+  height: calc(80% - 0px);
+  position: absolute;
+  left: 33%;
+  top: 2rem;
+}
+footer div.topo::after {
+  content: "";
+  border: 1px solid #C4C4C4;
+  height: 14rem;
+  position: absolute;
+  right: 33%;
+  top: 2rem;
+}
+footer h2 {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+footer ul li {
+  padding: 1rem;
+}
+footer ul li a {
+  color: #9F9F9F;
+  text-decoration: none;
+  padding: 1rem;
+}
+footer p {
+  padding-top: 1rem;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1rem;
+  position: relative;
+}
+footer p::after {
+  content: "";
+  border: 1px solid #C4C4C4;
+  width: 75%;
+  position: absolute;
+  left: 15%;
+  top: -0.1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  header {
+    max-width: 1400px;
+  }
+  main {
+    max-width: 1400px;
+  }
+}
+@media screen and (max-width: 615px) {
+  nav ul li {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul {
+    position: relative;
+  }
+  nav ul::before {
+    content: "v";
+    border-top: #ffffff 1px solid;
+    border-bottom: #ffffff 1px solid;
+    top: 10%;
+    right: 1px;
+  }
+  nav ul li {
+    display: none;
+  }
+  main article img {
+    margin: auto 1rem;
+  }
+  main article.pair img {
+    margin-left: -200px;
+  }
+  main article.impair {
+    max-width: 375px;
+    overflow: hidden;
+  }
+  main article.impair img {
+    margin-right: -200px;
+  }
+  main article h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  main article button.type_t, main article button.type_g {
+    margin-left: 0%;
+  }
+  main article p {
+    font-size: 1rem;
+  }
+  footer div.topo {
+    flex-direction: column;
+    position: static;
+  }
+  footer div.topo::before {
+    content: none;
+  }
+  footer div.topo::after {
+    content: none;
+  }
+  footer p::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
